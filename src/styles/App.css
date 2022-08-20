@@ -21,6 +21,9 @@ nav {
   font-family: "pkmn_rbygscregular", Arial, sans-serif;
   transition: 2s;
 }
+li {
+  font-family: "pkmn_rbygscregular", Arial, sans-serif;
+}
 /* React transition group */
 .my-node-enter {
   opacity: 0;

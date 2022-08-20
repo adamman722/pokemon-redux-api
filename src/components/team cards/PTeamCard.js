@@ -1,23 +1,23 @@
 import React from "react";
 import styled from "styled-components";
+import "../../styles/App.css";
 
 function PTeamCard(props) {
   const Container = styled.div``;
-
-  const pokemonData = props.fetchedPokemon.map((pokemon) => {
+  console.log(props);
+  const pokemonData = props.data.results.map((pokemon) => {
     return (
       <>
         {" "}
         <li>{pokemon.name}</li>
-        <li>
-          <img src={pokemon.sprites.front_default} alt="" />
-        </li>
       </>
     );
   });
   return (
     <>
-      <Container></Container>
+      <Container>
+        <ul>{pokemonData}</ul>
+      </Container>
     </>
   );
 }
