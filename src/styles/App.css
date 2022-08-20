@@ -21,9 +21,50 @@ nav {
   font-family: "pkmn_rbygscregular", Arial, sans-serif;
   transition: 2s;
 }
-.menu-bars {
+/* React transition group */
+.my-node-enter {
+  opacity: 0;
+  transform: translateY(-188px);
+}
+.my-node-enter-active {
+  opacity: 1;
+  transition: opacity 2000ms;
+}
+.my-node-exit {
+  opacity: 1;
+  transform: translateY(-188px);
+}
+.my-node-exit-active {
+  opacity: 0;
+  transition: opacity transform 200ms;
 }
 
+.burger-menu-enter {
+  opacity: 0;
+}
+.burger-menu-enter-active {
+  opacity: 1;
+  transition: opacity 6000ms;
+}
+.burger-menu-exit {
+  opacity: 1;
+  position: absolute;
+  left: 10px;
+}
+.burger-menu-exit-active {
+  opacity: 0;
+  transition: opacity 200ms;
+}
+.burger-icon {
+  cursor: pointer;
+  position: absolute;
+  left: 10px;
+}
+
+/* end of transition group */
+.logo-tag:hover:after {
+  content: " <=";
+}
 .App-logo {
   height: 40vmin;
   pointer-events: none;

@@ -1,33 +1,62 @@
 import React, { useState } from "react";
 import "../../styles/App.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faBars } from "@fortawesome/free-solid-svg-icons";
-import "animate.css";
+import { faBars, faArrowLeftLong } from "@fortawesome/free-solid-svg-icons";
+import { CSSTransition } from "react-transition-group";
+
 function Navbar() {
+  const [showButton, setShowButton] = useState(true);
   const [isOpen, setIsOpen] = useState(false);
 
   return (
     <>
-      {isOpen ? (
+      <CSSTransition
+        in={isOpen}
+        timeout={{ appear: 300, exit: 1500 }}
+        classNames="my-node"
+        unmountOnExit
+        onEnter={() => {
+          setShowButton(false);
+        }}
+        onExit={() => {
+          setShowButton(true);
+        }}
+      >
         <nav>
-          <div>Logo</div>
-          <div>Login</div>
-          <div>Home</div>
+          <div className="logo-tag">Logo</div>
+          <div className="logo-tag">Login</div>
+          <div className="logo-tag">Home</div>
+          <FontAwesomeIcon
+            icon={faBars}
+            size="2x"
+            onClick={() => {
+              setIsOpen(!isOpen);
+            }}
+          />
         </nav>
-      ) : (
+      </CSSTransition>
+
+      <CSSTransition
+        in={showButton}
+        timeout={{ enter: 6000, appear: 6000, exit: 6000 }}
+        classNames="burger-menu"
+        unmountOnExit
+        onEnter={() => {
+          setIsOpen(false);
+        }}
+        onExit={() => {
+          setIsOpen(true);
+        }}
+      >
         <div
           onClick={() => {
-            setIsOpen(!isOpen);
+            setIsOpen(true);
           }}
+          className={showButton ? "burger-icon" : null}
         >
-          {/* <FontAwesomeIcon
-            icon={faBars}
-            size="3x"
-     
-          /> */}
-          <h1>Helloooo</h1>
+          <FontAwesomeIcon icon={faBars} size="3x" />
         </div>
-      )}
+      </CSSTransition>
     </>
   );
 }

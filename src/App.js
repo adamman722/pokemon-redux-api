@@ -5,9 +5,9 @@ import { Outlet } from "react-router-dom";
 function App() {
   const { data, error, isLoading } = useGetAllPokemonByNameQuery("bulbasaur");
 
-  console.log(data);
-  console.log(error);
-  console.log(isLoading);
+  // console.log(data);
+  // console.log(error);
+  // console.log(isLoading);
 
   return (
     <div className="App">
