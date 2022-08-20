@@ -9,8 +9,19 @@
 .App {
   text-align: center;
 }
-h1 {
+nav {
+  position: absolute;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 2rem;
+  font-size: 1.5rem;
+  padding: 10px;
   font-family: "pkmn_rbygscregular", Arial, sans-serif;
+  transition: 2s;
+}
+.menu-bars {
 }
 
 .App-logo {

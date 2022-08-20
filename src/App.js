@@ -1,5 +1,6 @@
 import "./styles/App.css";
 import { useGetAllPokemonByNameQuery } from "./services/api/pokemon";
+import { Outlet } from "react-router-dom";
 
 function App() {
   const { data, error, isLoading } = useGetAllPokemonByNameQuery("bulbasaur");
@@ -10,7 +11,7 @@ function App() {
 
   return (
     <div className="App">
-      <h1>hello</h1>
+      <Outlet />
     </div>
   );
 }
