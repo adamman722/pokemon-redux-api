@@ -1,4 +1,4 @@
-import "./App.css";
+import "./styles/App.css";
 import { useGetAllPokemonByNameQuery } from "./services/api/pokemon";
 
 function App() {
@@ -7,6 +7,7 @@ function App() {
   console.log(data);
   console.log(error);
   console.log(isLoading);
+
   return (
     <div className="App">
       <h1>hello</h1>
