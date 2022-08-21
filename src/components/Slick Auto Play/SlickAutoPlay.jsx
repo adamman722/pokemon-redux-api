@@ -13,8 +13,8 @@ function SlickAutoPlay(props) {
     slidesToShow: 3,
     slidesToScroll: 1,
     autoplay: true,
-    speed: 9000,
-    autoplaySpeed: 20,
+    speed: 900000,
+    autoplaySpeed: 200,
     cssEase: "linear",
   };
   console.log(homePageTrainers);
