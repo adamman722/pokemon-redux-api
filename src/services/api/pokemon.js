@@ -7,7 +7,17 @@ export const pokemonApi = createApi({
   baseQuery: fetchBaseQuery({ baseUrl: "https://pokeapi.co/api/v2/" }),
   endpoints: (builder) => ({
     getAllPokemonByName: builder.query({
-      query: () => `pokemon/?limit=900`,
+      query: () => `pokemon?limit=100000&offset=0`,
+    }),
+  }),
+});
+
+export const singlePokemonApiCall = createApi({
+  reducerPath: " singlePokemonApiCall",
+  baseQuery: fetchBaseQuery({ baseUrl: "https://pokeapi.co/api/v2/" }),
+  endpoints: (builder) => ({
+    getPokemonByName: builder.query({
+      query: (name) => `pokemon/${name}`,
     }),
   }),
 });

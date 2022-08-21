@@ -11,7 +11,7 @@ function App() {
   const { data, error, isLoading } = useGetAllPokemonByNameQuery();
   const homePageTrainers = useSelector((state) => state.homePageTrainer.value);
 
-  // console.log(data);
+  console.log(data);
   // console.log(error);
   // console.log(isLoading);
   // console.log(homePageTrainers);

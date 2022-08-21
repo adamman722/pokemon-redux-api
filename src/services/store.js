@@ -8,6 +8,7 @@ export const store = configureStore({
   reducer: {
     // Add the generated reducer as a specific top-level slice
     [pokemonApi.reducerPath]: pokemonApi.reducer,
+
     homePageTrainer: homePageTrainerReducer,
   },
   // Adding the api middleware enables caching, invalidation, polling,

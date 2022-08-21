@@ -25,7 +25,7 @@ function PTeamCard({ data: { name, img, pokemon } }) {
     justify-content: space-around;
     width: 40rem;
   `;
-  console.log(name);
+
   //this was old but I want to keep it in
   //   const pokemonData = props.data.map((trainer) => {
   //     return (
