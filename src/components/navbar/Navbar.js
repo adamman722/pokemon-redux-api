@@ -7,7 +7,7 @@ import { CSSTransition } from "react-transition-group";
 function Navbar() {
   const [showButton, setShowButton] = useState(true);
   const [isOpen, setIsOpen] = useState(false);
-
+  //need to add the redirects to the correct place using react router
   return (
     <>
       <CSSTransition

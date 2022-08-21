@@ -3,14 +3,18 @@ import { useGetAllPokemonByNameQuery } from "./services/api/pokemon";
 import { Outlet } from "react-router-dom";
 import { listOfTrainers } from "./trainerList";
 import PTeamCard from "./components/team cards/PTeamCard";
+import { useSelector, useDispatch } from "react-redux";
+import SlickAutoPlay from "./components/Slick Auto Play/SlickAutoPlay";
 
 function App() {
   //we call this to get access to the redux api
   const { data, error, isLoading } = useGetAllPokemonByNameQuery();
+  const homePageTrainers = useSelector((state) => state.homePageTrainer.value);
 
-  console.log(data);
-  console.log(error);
-  console.log(isLoading);
+  // console.log(data);
+  // console.log(error);
+  // console.log(isLoading);
+  // console.log(homePageTrainers);
 
   //below is how we are going to import sprites
   //<img src={listOfTrainers[0].img} alt="" />
@@ -21,7 +25,10 @@ function App() {
   return (
     <div className="App">
       <Outlet pokemonData={data} />
-      {isLoading ? null : <PTeamCard data={data} />}
+      {/* {isLoading ? null : <PTeamCard data={data} />} */}
+      <div className="all-slick">
+        <SlickAutoPlay isLoading={isLoading} data={data} />
+      </div>
     </div>
   );
 }

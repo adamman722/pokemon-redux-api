@@ -8,6 +8,7 @@
 
 .App {
   text-align: center;
+  overflow: hidden;
 }
 nav {
   position: absolute;
@@ -68,6 +69,24 @@ li {
 .logo-tag:hover:after {
   content: " <=";
 }
+/* Slick  */
+
+/* the parent */
+.slick-test {
+  width: 100%;
+  background-color: brown;
+}
+/* need to play with this more but I got the jist of it  */
+.slick-slide > div {
+  margin: 0 10px;
+}
+.slick-list {
+  margin: 0 -10px;
+}
+.all-slick {
+  margin-top: 30rem;
+}
+/* End ofSlick  */
 .App-logo {
   height: 40vmin;
   pointer-events: none;
