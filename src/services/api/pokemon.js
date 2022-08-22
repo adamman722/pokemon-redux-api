@@ -24,4 +24,7 @@ export const singlePokemonApiCall = createApi({
 
 // Export hooks for usage in function components, which are
 // auto-generated based on the defined endpoints
+//example :
+//  use + getPokemonByName + Query
 export const { useGetAllPokemonByNameQuery } = pokemonApi;
+export const { useGetPokemonByNameQuery } = singlePokemonApiCall;

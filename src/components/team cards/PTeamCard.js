@@ -2,6 +2,7 @@ import React from "react";
 import styled from "styled-components";
 import "../../styles/App.css";
 
+//pokemon comes in as a array of objects
 function PTeamCard({ data: { name, img, pokemon } }) {
   const Container = styled.div`
     display: flex;
@@ -23,7 +24,7 @@ function PTeamCard({ data: { name, img, pokemon } }) {
     flex-wrap: wrap;
     gap: 10px;
     justify-content: space-around;
-    width: 40rem;
+    width: 38rem;
   `;
 
   //this was old but I want to keep it in
@@ -46,7 +47,8 @@ function PTeamCard({ data: { name, img, pokemon } }) {
           {pokemon.map((pMon) => {
             return (
               <div className="pokemon-itself">
-                <span>{pMon}</span>
+                <span>{pMon.name}</span>
+                <img src={pMon.img} alt="" />
               </div>
             );
           })}

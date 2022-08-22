@@ -1,14 +1,14 @@
 import { configureStore } from "@reduxjs/toolkit";
 // Or from '@reduxjs/toolkit/query/react'
 // import { setupListeners } from '@reduxjs/toolkit/query'
-import { pokemonApi } from "./api/pokemon";
+import { pokemonApi, singlePokemonApiCall } from "./api/pokemon";
 import homePageTrainerReducer from "./Slices/homePageTrainerSlice";
 
 export const store = configureStore({
   reducer: {
     // Add the generated reducer as a specific top-level slice
     [pokemonApi.reducerPath]: pokemonApi.reducer,
-
+    [singlePokemonApiCall.reducerPath]: singlePokemonApiCall.reducer,
     homePageTrainer: homePageTrainerReducer,
   },
   // Adding the api middleware enables caching, invalidation, polling,

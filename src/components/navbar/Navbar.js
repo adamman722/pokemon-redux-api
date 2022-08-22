@@ -4,9 +4,15 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faBars } from "@fortawesome/free-solid-svg-icons";
 import { CSSTransition } from "react-transition-group";
 
+import { useGetPokemonByNameQuery } from "../../services/api/pokemon";
+
 function Navbar() {
   const [showButton, setShowButton] = useState(true);
   const [isOpen, setIsOpen] = useState(false);
+
+  const { data, error, isLoading } = useGetPokemonByNameQuery("ditto");
+
+  console.log(data);
   //need to add the redirects to the correct place using react router
   return (
     <>

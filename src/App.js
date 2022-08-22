@@ -8,10 +8,11 @@ import SlickAutoPlay from "./components/Slick Auto Play/SlickAutoPlay";
 
 function App() {
   //we call this to get access to the redux api
-  const { data, error, isLoading } = useGetAllPokemonByNameQuery();
+  // const { data, error, isLoading } = useGetAllPokemonByNameQuery();
+
   const homePageTrainers = useSelector((state) => state.homePageTrainer.value);
 
-  console.log(data);
+  // console.log(data);
   // console.log(error);
   // console.log(isLoading);
   // console.log(homePageTrainers);
@@ -24,10 +25,10 @@ function App() {
 
   return (
     <div className="App">
-      <Outlet pokemonData={data} />
+      <Outlet />
       {/* {isLoading ? null : <PTeamCard data={data} />} */}
       <div className="all-slick">
-        <SlickAutoPlay isLoading={isLoading} data={data} />
+        <SlickAutoPlay />
       </div>
     </div>
   );
