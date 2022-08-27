@@ -11,6 +11,7 @@ import trainer24 from "../../images/Trainer Sprites/600px-Spr_Masters_Sonia_Spec
 const initialState = {
   value: [
     {
+      trainerId: 1,
       name: "Cynthia",
       img: trainer4,
       pokemon: [
@@ -41,6 +42,7 @@ const initialState = {
       ],
     },
     {
+      trainerId: 2,
       name: "Wallace",
       img: trainer18,
       pokemon: [
@@ -71,6 +73,7 @@ const initialState = {
       ],
     },
     {
+      trainerId: 3,
       name: "Alder",
       img: trainer19,
       pokemon: [
@@ -101,6 +104,7 @@ const initialState = {
       ],
     },
     {
+      trainerId: 4,
       name: "Acerola",
       img: trainer20,
       pokemon: [
@@ -131,6 +135,7 @@ const initialState = {
       ],
     },
     {
+      trainerId: 5,
       name: "Allister",
       img: trainer21,
       pokemon: [
@@ -161,6 +166,7 @@ const initialState = {
       ],
     },
     {
+      trainerId: 6,
       name: "N",
       img: trainer22,
       pokemon: [
@@ -191,6 +197,7 @@ const initialState = {
       ],
     },
     {
+      trainerId: 7,
       name: "Adam",
       img: trainer23,
       pokemon: [
@@ -221,6 +228,7 @@ const initialState = {
       ],
     },
     {
+      trainerId: 8,
       name: "Sgae",
       img: trainer24,
       pokemon: [

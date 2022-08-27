@@ -3,22 +3,22 @@ import "../../styles/App.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faBars } from "@fortawesome/free-solid-svg-icons";
 import { CSSTransition } from "react-transition-group";
-
+import { NavLink } from "react-router-dom";
 import { useGetPokemonByNameQuery } from "../../services/api/pokemon";
 
 function Navbar() {
   const [showButton, setShowButton] = useState(true);
   const [isOpen, setIsOpen] = useState(false);
 
-  const { data, error, isLoading } = useGetPokemonByNameQuery("ditto");
+  //how you call RTK query
+  // const { data, error, isLoading } = useGetPokemonByNameQuery("ditto");
 
-  console.log(data);
   //need to add the redirects to the correct place using react router
   return (
     <>
       <CSSTransition
         in={isOpen}
-        timeout={{ appear: 300, exit: 1500 }}
+        timeout={{ appear: 1000, exit: 1500 }}
         classNames="my-node"
         unmountOnExit
         onEnter={() => {
@@ -31,7 +31,9 @@ function Navbar() {
         <nav>
           <div className="logo-tag">Logo</div>
           <div className="logo-tag">Login</div>
-          <div className="logo-tag">Home</div>
+          <NavLink to={`/`} className="logo-tag">
+            Home
+          </NavLink>
           <FontAwesomeIcon
             icon={faBars}
             size="2x"

@@ -5,6 +5,7 @@ import { listOfTrainers } from "./trainerList";
 import PTeamCard from "./components/team cards/PTeamCard";
 import { useSelector, useDispatch } from "react-redux";
 import SlickAutoPlay from "./components/Slick Auto Play/SlickAutoPlay";
+import Navbar from "./components/navbar/Navbar";
 
 function App() {
   //we call this to get access to the redux api
@@ -25,11 +26,8 @@ function App() {
 
   return (
     <div className="App">
+      <Navbar />
       <Outlet />
-      {/* {isLoading ? null : <PTeamCard data={data} />} */}
-      <div className="all-slick">
-        <SlickAutoPlay />
-      </div>
     </div>
   );
 }

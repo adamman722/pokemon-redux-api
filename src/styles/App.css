@@ -32,7 +32,7 @@ li {
 }
 .my-node-enter-active {
   opacity: 1;
-  transition: opacity 2000ms;
+  transition: opacity 10ms;
 }
 .my-node-exit {
   opacity: 1;
@@ -40,7 +40,7 @@ li {
 }
 .my-node-exit-active {
   opacity: 0;
-  transition: opacity transform 200ms;
+  transition: opacity transform 2000ms;
 }
 
 .burger-menu-enter {
@@ -48,7 +48,7 @@ li {
 }
 .burger-menu-enter-active {
   opacity: 1;
-  transition: opacity 6000ms;
+  transition: opacity 3000ms;
 }
 .burger-menu-exit {
   opacity: 1;
@@ -66,6 +66,10 @@ li {
 }
 
 /* end of transition group */
+.logo-tag {
+  color: black;
+  text-decoration: none;
+}
 .logo-tag:hover:after {
   content: " <=";
 }

@@ -27,7 +27,7 @@ function SlickAutoPlay(props) {
     );
   });
   return (
-    <div>
+    <div className="all-slick">
       <Slider {...settings}>{slickTrainers}</Slider>
     </div>
   );
