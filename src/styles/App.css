@@ -25,6 +25,7 @@ nav {
 li {
   font-family: "pkmn_rbygscregular", Arial, sans-serif;
 }
+
 /* React transition group */
 .my-node-enter {
   opacity: 0;

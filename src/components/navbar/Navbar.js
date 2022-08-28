@@ -12,7 +12,11 @@ function Navbar() {
 
   const options = ["Login", "Home", "Account"];
   const navOptions = options.map((option) => {
-    return <NavLink></NavLink>;
+    return (
+      <NavLink to={`/${option.toLocaleLowerCase()}`} className="logo-tag">
+        {option}
+      </NavLink>
+    );
   });
   //how you call RTK query
   // const { data, error, isLoading } = useGetPokemonByNameQuery("ditto");
@@ -33,11 +37,12 @@ function Navbar() {
         }}
       >
         <nav>
-          <div className="logo-tag">Logo</div>
+          {navOptions}
+          {/* <div className="logo-tag">Logo</div>
           <div className="logo-tag">Login</div>
           <NavLink to={`/home`} className="logo-tag">
             Home
-          </NavLink>
+          </NavLink> */}
           <FontAwesomeIcon
             icon={faBars}
             size="2x"

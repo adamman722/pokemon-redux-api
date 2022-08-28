@@ -1,6 +1,6 @@
 import { createSlice } from "@reduxjs/toolkit";
 
-const initialState = [];
+const initialState = [{ id: 99999999, userName: "Admin", password: "test" }];
 
 const stupidLargeNumber = 1000000000;
 
@@ -39,6 +39,7 @@ const UserSlice = createSlice({
 
       state[positionOfUser] = foundUser;
     },
+    //TODO: add the delete reducer in here will do at a later time
   },
 });
 
