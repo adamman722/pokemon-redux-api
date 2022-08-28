@@ -1,12 +1,12 @@
 import { createSlice } from "@reduxjs/toolkit";
-import trainer4 from "../../images/Trainer Sprites/Spr_DP_Cynthia.webp";
-import trainer18 from "../../images/Trainer Sprites/Spr_RS_Wallace.webp";
-import trainer19 from "../../images/Trainer Sprites/Spr_BW_Alder.webp";
-import trainer20 from "../../images/Trainer Sprites/600px-Spr_Masters_Acerola_Fall_2020.png";
-import trainer21 from "../../images/Trainer Sprites/240px-Spr_Masters_Allister.webp";
-import trainer22 from "../../images/Trainer Sprites/240px-Spr_Masters_N_2.png";
-import trainer23 from "../../images/Trainer Sprites/240px-Spr_Masters_Blue_Sygna_2.webp";
-import trainer24 from "../../images/Trainer Sprites/600px-Spr_Masters_Sonia_Special_Costume_2.png";
+import trainer4 from "../../../images/Trainer Sprites/Spr_DP_Cynthia.webp";
+import trainer18 from "../../../images/Trainer Sprites/Spr_RS_Wallace.webp";
+import trainer19 from "../../../images/Trainer Sprites/Spr_BW_Alder.webp";
+import trainer20 from "../../../images/Trainer Sprites/600px-Spr_Masters_Acerola_Fall_2020.png";
+import trainer21 from "../../../images/Trainer Sprites/240px-Spr_Masters_Allister.webp";
+import trainer22 from "../../../images/Trainer Sprites/240px-Spr_Masters_N_2.png";
+import trainer23 from "../../../images/Trainer Sprites/240px-Spr_Masters_Blue_Sygna_2.webp";
+import trainer24 from "../../../images/Trainer Sprites/600px-Spr_Masters_Sonia_Special_Costume_2.png";
 
 const initialState = {
   value: [

@@ -46,7 +46,7 @@ function PTeamCard({ data: { trainerId, name, img, pokemon } }) {
     <Container>
       <div style={{ display: "flex", width: "100%" }}>
         <h2 className="trainer-name">{name}</h2>
-        <NavLink to={`/${trainerId}`}>Check Trainer</NavLink>
+        <NavLink to={`/home/${trainerId}`}>Check Trainer</NavLink>
       </div>
       <img src={img} alt="" style={{ height: "100px" }} />
       <PokemonContainer>
