@@ -17,6 +17,10 @@ function Router() {
         <Route path="/login" element={<App />}>
           <Route path="/login" element={<Login />} />
         </Route>
+        {/* TODO: need to create a actual account page just using TrainerDetails as a test */}
+        <Route path="/account" element={<App />}>
+          <Route path="/account/:trainerId" element={<TrainerDetails />} />
+        </Route>
       </Routes>
     </BrowserRouter>
   );

@@ -13,7 +13,6 @@ function Login() {
 
   function handleSubmit(e) {
     e.preventDefault();
-    e.preventDefault();
     const d = new Date();
     d.setTime(d.getTime() + 5 * 24 * 60 * 60 * 1000);
     console.log("clicked");
@@ -21,8 +20,8 @@ function Login() {
       (user) => user.userName === userName && user.password === password
     );
     console.log(user);
-    //navigate(`/home/${user.id}`);
     document.cookie = `id=${user.id};expires=${d}; path=/;`;
+    navigate(`/account/${user.id}`);
 
     console.log(document.cookie);
   }
